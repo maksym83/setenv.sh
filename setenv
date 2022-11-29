@@ -1,0 +1,8 @@
+DIR=$(pwd)
+cat << EOF > "$DIR/backend.tf"
+bucket = "`gsutil ls | grep "backend-" | awk -F "/" '{print $3}'`"
+prefix = "/dev`pwd`"
+  }
+}
+EOF
+cat "$DIR/beckend.tf"
